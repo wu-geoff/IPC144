@@ -328,7 +328,8 @@ void runInventorySystem(void){
 }
 
 bool getYesOrNo(void){
-	char input[MAX_LENGTH+1]; bool result = false;
+	char input[MAX_LENGTH+1]; 
+	bool result = false;
 
 	do{
 		scanf(" %s",input);
@@ -380,7 +381,8 @@ bool isQuantityLow(struct Item *input){
 }
 
 struct Item enterItem(int skuInput){
-	bool yesOrNo; struct Item newItem;
+	bool yesOrNo;
+	struct Item newItem;
 	
 	newItem.sku = skuInput;
 	printf("        SKU: %d\n", newItem.sku);
@@ -407,7 +409,8 @@ struct Item enterItem(int skuInput){
 }
 
 void displayItem(struct Item *input, int linear){
-	char *taxed[] = {"No", "Yes"}; bool lowQty = isQuantityLow(input);
+	char *taxed[] = {"No", "Yes"};
+	bool lowQty = isQuantityLow(input);
 
 	if(linear == FORM){
 		printf("        SKU: %d\n", (*input).sku);
@@ -439,7 +442,7 @@ taxed[(*input).isTaxed], (*input).quantity, (*input).minQuantity, totalAfterTax(
 
 
 void listItems(struct Item item[], int NoOfItems){
-	double  grandTotal = 0;
+	double grandTotal = 0;
 	int i;
 	printTitle();
 	for(i = 0; i < NoOfItems; i++){
