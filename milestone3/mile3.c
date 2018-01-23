@@ -58,7 +58,7 @@ const double TAX = 0.13;
 
 // ==================  MAIN FUNCTION ===============
 
-/*int main(void){
+int main(void){
    // hard-coded inventory; 21 items - room for 1 more
 
    struct Item inventory[21] = 
@@ -214,7 +214,7 @@ const double TAX = 0.13;
    printf( "=== END TEST ===\n" );
 
    return 0; 
-}*/
+}
 
 //mile1
 void printWelcome(void){
